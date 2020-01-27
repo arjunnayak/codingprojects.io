@@ -1,0 +1,257 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Scaffolding */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 80px;
+  margin-bottom: 75px;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+}
+
+footer p,
+ul {
+  margin-bottom: 0;
+}
+
+/* Input Fields */
+
+textarea {
+  resize: vertical;
+}
+
+/* Allow height on checklist to accomodate multiple lines */
+.form-control {
+  height: auto;
+}
+
+/* Navbar */
+.navbar-nav img {
+  width: 30px;
+  min-height: 30px;
+  margin: -15px 15px -15px;
+}
+
+.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.navbar-brand {
+  font-size: 18px;
+  float: left;
+}
+
+.navbar-toggler {
+  position: relative;
+  float: right;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.dropdown-menu {
+  left: initial;
+  right: 0;
+}
+
+.navbar-light {
+  border: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  opacity: 0.9;
+}
+
+.navbar-light .navbar-nav > li > a {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-light .navbar-brand {
+  color: #252525;
+  line-height: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar-light .navbar-toggler {
+  border-bottom-color: #ddd;
+  color: #333;
+}
+
+.navbar-light .navbar-toggler:focus {
+  background: #ddd;
+}
+
+.navbar-light .navbar-toggler:hover {
+  background: #ddd;
+}
+
+.navbar-light.bg-light {
+  background-color: #fff !important;
+}
+
+.navbar-toggler-icon {
+  color: rgb(51, 51, 51);
+  font-size: 16px;
+}
+
+.dropdown-item > a {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  left: initial;
+  right: 0; /* add right with 0 or a low pixel value */
+}
+
+/* button raised definition
+this button uses gradient for the background */
+/* $btn-raised-color: rgb(51, 51, 51);
+$btn-raised-background: #f8f8f8;
+$btn-raised-border: rgb(204, 204, 204);
+$enable-gradients: true;
+
+.btn-raised {
+  @include button-variant(
+    $btn-raised-background,
+    $btn-raised-border,
+    $btn-raised-color
+  )
+} */
+
+/*
+* Solves Bootstrap 4 issue
+* https://github.com/twbs/bootstrap/issues/25654
+*/
+/* Styles in sm disposition and up */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Solves bs4 bug */
+  .navbar-expand-md > .container,
+  .navbar-expand-lg > .container,
+  .navbar-expand-xl > .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* Styles in md disposition and up */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Solves bs4 bug */
+  .navbar-expand-lg > .container,
+  .navbar-expand-xl > .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* Styles in lg disposition and up */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Solves bs4 bug */
+  .navbar-expand-xl > .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* Alerts */
+
+.alert {
+  margin-top: 20px;
+}
+
+/* Thumbnails */
+
+.thumbnail {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: 0 0 5px #ccc, inset 0 0 0 #000;
+}
+
+/* Font Icons */
+
+.fa {
+  margin-right: 6px;
+}
+
+.fab {
+  margin-right: 6px;
+}
+
+.fas {
+  margin-right: 6px;
+}
+
+.far {
+  margin-right: 6px;
+}
+
+/* Home page */
+header.masthead {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+.home p,
+li {
+  font-size: 1rem;
+}

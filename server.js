@@ -1,3 +1,4 @@
+// NOTE: Only if you need to run on a express server. By default this runs as a static site
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -6,7 +7,7 @@ require("dotenv").config();
 app.use(express.static(path.join(__dirname, "build")));
 
 // allow client side routing
-app.get("/*", function(req, res) {
+app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
